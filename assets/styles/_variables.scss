@@ -1,0 +1,49 @@
+$paletteBlue: #4285f4;
+$paletteDarkBlue: #01579b;
+$paletteYellow: #fbbc05;
+$paletteRed: #ea4335;
+$paletteGreen: #24a853;
+$paletteOrange: #ff8f00;
+$paletteDarkGray: #2F3436;
+$paletteLightGray: #d3d3d3;
+$palettePink: #ff0080;
+$palettePurple: #7928ca;
+
+$primaryColor: $paletteYellow;
+$primaryColorLight: darken($paletteYellow, 10%);
+
+$lightBg: #ffffff;
+$lightSecondaryBg: #f5f5f5;
+$lightColor: #24292f;
+$lightShadowColor: $paletteLightGray;
+$darkBg: #121212;
+$darkSecondaryBg: #000000;
+$darkColor: #f0f0f0;
+$lightBorderColor: #cfcfcf;
+$lightBorderLighterColor: lighten($lightBorderColor, 15%);
+$darkBorderColor: #333333;
+$darkBorderLighterColor: darken($darkBorderColor, 10%);
+$darkShadowColor: #111111;
+$lightHoverBgColor: darken($lightBg, 15%);
+$darkHoverBgColor: lighten($darkBg, 15%);
+$lightActiveBgColor: darken($lightBg, 9%);
+$darkActiveBgColor: lighten($darkBg, 9%);
+
+$borderRadius: 5px;
+
+$navZIndex: 1000000;
+
+$dialogPadding: 10px;
+$dialogZIndex: $navZIndex * 10;
+
+$successColor: $paletteGreen;
+$errorColor: $paletteRed;
+
+$animationSpeed: 350ms;
+
+$xsMax: 767px;
+$smMax: 992px;
+$mdMax: 1200px;
+$smMin: $xsMax + 1px;
+$mdMin: $smMax + 1px;
+$lgMin: $mdMax + 1px;

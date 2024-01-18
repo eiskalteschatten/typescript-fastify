@@ -1,0 +1,11 @@
+node_modules
+test/performance-results
+test/unit/data
+test-results
+
+*.spec.js
+*.min.js
+
+dist
+build
+public/scripts

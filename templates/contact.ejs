@@ -1,0 +1,26 @@
+<section>
+  <h1 class="page-title">Contact</h1>
+
+  <% if (typeof success !== 'undefined') { %>
+    <div class="mb-5 success-message fw-bold">Your message was sent successfully!</div>
+  <% } else if (typeof error !== 'undefined') { %>
+    <div class="mb-5 error-message fw-bold">An error occurred while sending your message. Please send your message directly to <a href="mailto:alex@alexseifert.com">alex@alexseifert.com</a>.</div>
+  <% } %>
+
+  <form method="post" action="/contact" class="contact-form">
+    <div class="form-group">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" name="name" class="input full-width" required>
+    </div>
+    <div class="form-group">
+      <label for="name" class="form-label">Email:</label>
+      <input type="email" name="email" class="input full-width" required>
+    </div>
+    <div class="form-group">
+      <label for="message" class="form-label">Message:</label>
+      <textarea name="message" class="input full-width" required rows="10"></textarea>
+    </div>
+
+    <button type="submit" class="button primary large">Send</button>
+  </form>
+</section>

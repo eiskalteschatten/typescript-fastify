@@ -1,0 +1,67 @@
+@import "./variables";
+
+@mixin formBase {
+  background-color: darken($lightBg, 7%);
+  border: 0;
+  border-radius: $borderRadius;
+  transition: background-color $animationSpeed;
+  color: $lightColor;
+
+  @media (prefers-color-scheme: dark) {
+    color: $darkColor;
+    background-color: lighten($darkBg, 10%);
+  }
+
+  &:hover:not(:disabled) {
+    background-color: darken($lightBg, 11%);
+    color: $lightColor;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: lighten($darkBg, 15%);
+      color: $darkColor;
+    }
+  }
+
+  &:active:not(:disabled), &:not(button):focus {
+    background-color: darken($lightBg, 15%);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: lighten($darkBg, 10%);
+    }
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+}
+
+@mixin hoverActiveBackgrounds {
+  transition: background-color $animationSpeed;
+
+  &:hover {
+    background-color: darken($lightBg, 11%);
+    color: $lightColor;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: lighten($darkBg, 15%);
+      color: $darkColor;
+    }
+  }
+
+  &:active {
+    background-color: darken($lightBg, 15%);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: lighten($darkBg, 10%);
+    }
+  }
+}
+
+@mixin hoverPrimaryLink {
+  color: var(--color);
+
+  &:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+}

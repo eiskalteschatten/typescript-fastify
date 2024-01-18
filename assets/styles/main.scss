@@ -1,0 +1,238 @@
+@import "./variables";
+@import "./mixins";
+
+:root {
+  --background-color: #{$lightBg};
+  --background-secondary-color: #{$lightSecondaryBg};
+  --opposite-background-color: #{$darkBg};
+  --color: #{$lightColor};
+  --opposite-color: #{$darkColor};
+  --primary-color: #{$primaryColorLight};
+  --border-color: #{$lightBorderColor};
+  --border-lighter-color: #{$lightBorderLighterColor};
+  --border-radius: #{$borderRadius};
+  --hover-background-color: #{$lightHoverBgColor};
+  --active-background-color: #{$lightActiveBgColor};
+  --shadow-color: #00000010;
+  --backdrop-color: #ffffff98;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #{$darkBg};
+    --background-secondary-color: #{$darkSecondaryBg};
+    --opposite-background-color: #{$lightBg};
+    --color: #{$darkColor};
+    --opposite-color: #{$lightColor};
+    --primary-color: #{$primaryColor};
+    --border-color: #{$darkBorderColor};
+    --border-lighter-color: #{$darkBorderLighterColor};
+    --hover-background-color: #{$darkHoverBgColor};
+    --active-background-color: #{$darkActiveBgColor};
+    --shadow-color: #ffffff10;
+    --backdrop-color: #00000098;
+  }
+}
+
+html, body {
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+}
+
+body {
+  &.mobile-menu-open {
+    overflow: hidden;
+  }
+}
+
+a {
+  color: var(--primary-color);
+  transition: color 200ms;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color);
+  }
+
+  &.primary {
+    color: var(--primary-color);
+
+    &:hover {
+      color: var(--color);
+    }
+  }
+
+  &.body-color {
+    @include hoverPrimaryLink;
+  }
+}
+
+p {
+  margin: 20px 0;
+}
+
+.palette-blue {
+  background-color: $paletteBlue;
+  color: $darkColor;
+}
+
+.palette-dark-blue {
+  background-color: $paletteDarkBlue;
+  color: $darkColor;
+}
+
+.palette-gray {
+  background-color: $paletteLightGray;
+  color: $lightColor;
+}
+
+.palette-dark-gray {
+  background-color: $paletteDarkGray;
+  color: $darkColor;
+}
+
+.palette-orange {
+  background-color: $paletteOrange;
+  color: $lightColor;
+}
+
+.palette-yellow {
+  background-color: $paletteYellow;
+  color: $lightColor;
+}
+
+.palette-red {
+  background-color: $paletteRed;
+  color: $darkColor;
+}
+
+.palette-green {
+  background-color: $paletteGreen;
+  color: $lightColor;
+}
+
+.palette-pink {
+  background-color: $palettePink;
+  color: $lightColor;
+}
+
+.palette-purple {
+  background-color: $palettePurple;
+  color: $darkColor;
+}
+
+.page-title {
+  padding-bottom: 35px;
+
+  &.no-padding-bottom {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.sub-headline {
+  opacity: .65;
+  transition: opacity 250ms;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  p {
+    margin: 15px 0 0 0;
+  }
+}
+
+.low-opacity-text {
+  opacity: .65;
+  transition: opacity 250ms;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.badge {
+  text-decoration: none;
+  display: block;
+  border-radius: var(--border-radius);
+  background-color: var(--background-secondary-color);
+  padding: 5px 12px;
+  transition: background-color 350ms;
+  font-size: .9em;
+  font-weight: 700;
+  color: var(--color);
+
+  a {
+    text-decoration: none;
+    color: var(--color);
+
+    &:hover {
+      color: #000000;
+    }
+  }
+
+  &:hover {
+    color: #000000;
+    background-color: var(--primary-color);
+
+    a {
+      color: #000000;
+    }
+  }
+
+  &.small {
+    font-weight: 600;
+    font-size: .85em;
+    padding: 3px 10px;
+  }
+
+  &.primary {
+    color: #000000;
+    background-color: var(--primary-color);
+
+    a {
+      color: #000000;
+    }
+  }
+
+  &.green {
+    color: #ffffff;
+    background-color: $paletteGreen;
+
+    a {
+      color: #ffffff;
+    }
+  }
+
+  &.orange {
+    color: #000000;
+    background-color: $paletteOrange;
+
+    a {
+      color: #000000;
+    }
+  }
+}
+
+.alert {
+  border-radius: 5px;
+
+  &.error {
+    color: $errorColor;
+  }
+}
+
+@import "./fonts";
+@import "./structure";
+@import "./home";
+@import "./header";
+@import "./buttons";
+@import "./forms";
+// @import "./nav";
+@import "./feeds";
+@import "./contact";

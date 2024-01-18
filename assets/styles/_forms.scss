@@ -1,0 +1,82 @@
+@import "./variables";
+@import "./mixins";
+
+.input {
+  @include formBase;
+  outline: none;
+  padding: 4px 10px;
+  border: none;
+  color: $darkColor;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.large {
+    font-size: 1.1em;
+    padding: 8px 14px;
+  }
+}
+
+.input-with-icon {
+  @include formBase;
+
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+
+  &.error {
+    border: 1px solid $errorColor;
+  }
+
+  &.focused {
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+
+  input {
+    background-color: transparent;
+    outline: none;
+    padding: 4px 10px;
+    border: none;
+    color: $darkColor;
+    width: 100%;
+
+    &.large {
+      font-size: 1.1em;
+      padding: 8px 14px;
+    }
+  }
+
+  .label {
+    margin-bottom: 5px;
+    text-align: left;
+    user-select: none;
+  }
+
+  .error-message {
+    font-size: .8em;
+    margin-top: 5px;
+    text-align: left;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+
+  .form-label {
+    margin-bottom: 5px;
+    display: block;
+  }
+}
+
+.success-message {
+  color: $successColor;
+}
+
+.error-message {
+  color: $errorColor;
+}

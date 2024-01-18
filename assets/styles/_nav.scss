@@ -1,0 +1,59 @@
+@import "./variables";
+
+.sidebar-nav {
+  background-color: var(--background-secondary-color);
+  width: 300px;
+  border-right: 1px solid var(--border-color);
+
+  @media (max-width: $smMax) {
+    position: fixed;
+    top: $toolbarHeightMobile;
+    left: -100%;
+    transition: left $animationSpeed ease-in-out;
+    height: calc(100% - #{$toolbarHeightMobile});
+    z-index: 10000;
+
+    &.open {
+      left: 0;
+
+      &::before {
+        content: '';
+        position: fixed;
+        top: $toolbarHeightMobile;
+        left: 0;
+        height: calc(100% - #{$toolbarHeightMobile});
+        width: 100%;
+        z-index: -1;
+        opacity: 1;
+        animation: sideNavFadeBgIn $animationSpeed ease-in-out;
+        background-color: var(--backdrop-color);
+      }
+    }
+  }
+}
+
+@keyframes sideNavFadeBgIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav-button {
+  color: var(--color);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+  transition: background-color 175ms;
+
+  &:hover, &.selected {
+    background-color: var(--hover-background-color);
+  }
+
+  &:active {
+    background-color: var(--active-background-color);
+  }
+}

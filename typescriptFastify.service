@@ -1,0 +1,29 @@
+# Copies to /etc/systemd/system
+
+# Start service
+# sudo systemctl start typescriptFastify
+
+# Enable restart on reboot
+# sudo systemctl enable typescriptFastify
+
+# Reload
+# sudo systemctl daemon-reload
+
+# Follow logging
+# sudo journalctl --follow -u typescriptFastify
+
+[Unit]
+Description=Feed The Dev
+
+[Service]
+ExecStart=/var/www/typescript-fastify/typescriptFastifyStart.sh
+Restart=always
+User=www-data
+# Note Debian/Ubuntu uses 'nogroup', RHEL/Fedora uses 'nobody'
+Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/var/www/typescript-fastify
+
+[Install]
+WantedBy=multi-user.target

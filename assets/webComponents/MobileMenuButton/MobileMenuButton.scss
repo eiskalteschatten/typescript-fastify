@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+
+mobile-menu-button {
+  cursor: default;
+  user-select: none;
+
+  @media (min-width: $mdMin) {
+    display: none;
+  }
+
+  &.animate {
+    animation: menuOpenClose 400ms ease-in-out;
+  }
+}
+
+@keyframes menuOpenClose {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}

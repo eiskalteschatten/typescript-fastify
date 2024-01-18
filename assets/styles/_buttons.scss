@@ -1,0 +1,77 @@
+@import "./variables";
+@import "./mixins";
+
+.button {
+  @include formBase;
+
+  padding: 3px 10px;
+  font-size: .9em;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  gap: 5px;
+  transition: background-color $animationSpeed, color $animationSpeed;
+
+  @media (max-width: $xsMax) {
+    white-space: normal;
+  }
+
+  &.icon-button {
+    padding: 0 6px;
+  }
+
+  &.delete-button {
+    color: $paletteRed;
+
+    &:hover {
+      color: $paletteRed;
+    }
+  }
+
+  &.large {
+    font-size: 1em;
+    padding: 4px 12px;
+  }
+
+  &.primary {
+    background-color: $primaryColor;
+    color: $lightColor;
+
+    &:hover:not(:disabled) {
+      background-color: darken($primaryColor, 6%);
+      color: $darkColor;
+    }
+
+    &:active:not(:disabled) {
+      background-color: darken($primaryColor, 12%);
+    }
+  }
+
+  &.white {
+    background-color: var(--opposite-background-color);
+    color: var(--opposite-color);
+
+    &:hover:not(:disabled) {
+      background-color: rgba($lightBg, 20%);
+      color: var(--color);
+    }
+
+    &:active:not(:disabled) {
+      background-color: transparent;
+      color: var(--color);
+    }
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.transparent-bg {
+    background-color: transparent;
+  }
+}

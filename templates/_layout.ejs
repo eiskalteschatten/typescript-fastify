@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="" >
+    <meta name="color-scheme" content="light dark">
+
+    <title><%= typeof title !== 'undefined' ? `${title} - TypeScript Fastify` : 'TypeScript Fastify' %></title>
+
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+    <link rel="stylesheet" href="/dist/bootstrap.css">
+    <link rel="stylesheet" href="/dist/main.css">
+    <link rel="stylesheet" href="/dist/webComponents.css">
+  </head>
+  <body>
+    <header class="header py-5 d-flex align-items-center justify-content-center">
+      <a href="/" class="d-flex align-items-center gap-2 logo-link">
+        <img src="/images/favicon.svg" alt="TypeScript Fastify" class="logo"> TypeScript Fastify
+      </a>
+    </header>
+
+    <main class="flex-grow-1 py-4 container">
+      <%- body %>
+    </main>
+
+    <footer class="py-5">
+      <div class="container d-flex flex-column flex-lg-row justify-content-lg-between gap-4">
+        <div class="d-flex flex-column flex-md-row gap-2 gap-md-4">
+          <% for (const navItem of mainNav) { %>
+            <a href="<%=navItem.url%>"><%=navItem.label%></a>
+          <% } %>
+          <a href="/contact/">Contact Us</a>
+        </div>
+
+        <div class="text-lg-end text-center">
+          &copy; Alex Seifert 2024
+        </div>
+      </div>
+    </footer>
+
+    <script src="/dist/main.js" defer async></script>
+    <script src="/dist/webComponents.js" defer async></script>
+  </body>
+</html>
