@@ -60,14 +60,11 @@
     "@fastify/static": "^6.6.0",
     "@fastify/view": "^8.2.0",
     "bootstrap": "^5.3.0",
-    "cron": "^3.1.6",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
     "fastify": "^4.11.0",
     "nodemailer": "^6.9.3",
-    "open-graph-scraper": "^6.3.2",
     "pino": "^8.8.0",
-    "pino-pretty": "^10.0.0",
-    "rss-parser": "^3.13.0"
+    "pino-pretty": "^10.0.0"
   }
 }
