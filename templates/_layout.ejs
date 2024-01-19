@@ -20,6 +20,14 @@
       <a href="/" class="d-flex align-items-center gap-2 logo-link">
         <img src="/images/favicon.svg" alt="TypeScript Fastify" class="logo"> TypeScript Fastify
       </a>
+
+      <nav class="d-none d-lg-flex align-items-center gap-3">
+        <% for (const navItem of mainNav) { %>
+          <a href="<%=navItem.url%>" is="nav-link" class="main-nav-button <% if (typeof mainNavId !== 'undefined' && mainNavId === navItem.id) { %>selected<% } %>">
+            <%=navItem.label%>
+          </a>
+        <% } %>
+      </nav>
     </header>
 
     <main class="flex-grow-1 py-4 container">

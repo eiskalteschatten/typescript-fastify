@@ -41,19 +41,23 @@
   }
 }
 
-.nav-button {
-  color: var(--color);
-  text-decoration: none;
-  white-space: nowrap;
-  padding: 6px 12px;
-  border-radius: var(--border-radius);
-  transition: background-color 175ms;
+.main-nav {
+  height: 100%;
 
-  &:hover, &.selected {
-    background-color: var(--hover-background-color);
-  }
+  .main-nav-button {
+    color: var(--color);
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    transition: background-color 175ms;
 
-  &:active {
-    background-color: var(--active-background-color);
+    &:hover, &.selected {
+      background-color: var(--hover-background-color);
+    }
+
+    &:active {
+      background-color: var(--active-background-color);
+    }
   }
 }
