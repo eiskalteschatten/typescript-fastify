@@ -1,24 +1,22 @@
-import './MobileMenuButton.scss';
-
 class MobileMenuButton extends HTMLElement {
-  private sidebarMenuId = 'sidebarNav';
-  private mobileMenuOpenClass = 'open';
-  private buttonAnimationClass = 'animate';
+  mobileMenuId = 'mobileMenu';
+  mobileMenuOpenClass = 'open';
+  buttonAnimationClass = 'animate';
 
-  connectedCallback(): void {
+  connectedCallback() {
     this.showContent();
     this.onclick = this.toggleMenuIsOpen;
   }
 
-  private showContent(): void {
-    this.innerHTML = !document.getElementById(this.sidebarMenuId)?.classList.contains(this.mobileMenuOpenClass)
+  showContent() {
+    this.innerHTML = !document.getElementById(this.mobileMenuId)?.classList.contains(this.mobileMenuOpenClass)
       ? '<span class="material-icons">menu</span>'
       : '<span class="material-icons">close</span>';
   }
 
-  private toggleMenuIsOpen(): void {
+  toggleMenuIsOpen() {
     this.classList.add(this.buttonAnimationClass);
-    const mobileMenu = document.getElementById(this.sidebarMenuId);
+    const mobileMenu = document.getElementById(this.mobileMenuId);
 
     if (mobileMenu?.classList.contains(this.mobileMenuOpenClass)) {
       mobileMenu.classList.remove(this.mobileMenuOpenClass);

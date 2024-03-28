@@ -23,7 +23,6 @@
   ],
   "exclude": [
     "dist",
-    "node_modules",
-    "assets"
+    "node_modules"
   ]
 }

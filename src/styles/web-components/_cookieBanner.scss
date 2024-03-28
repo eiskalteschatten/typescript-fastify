@@ -1,0 +1,12 @@
+dialog[is="cookie-banner"] {
+  background: var(--background-color);
+  padding: 15px 20px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+
+  &::backdrop {
+    background-color: var(--background-color);
+    opacity: .8;
+  }
+}

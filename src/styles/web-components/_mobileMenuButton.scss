@@ -3,6 +3,7 @@
 mobile-menu-button {
   cursor: default;
   user-select: none;
+  color: #ffffff;
 
   @media (min-width: $mdMin) {
     display: none;
@@ -19,7 +20,7 @@ mobile-menu-button {
     opacity: 1;
   }
   50% {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     opacity: 0;
   }
   100% {

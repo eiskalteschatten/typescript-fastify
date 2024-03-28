@@ -1,0 +1,27 @@
+to-the-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 20px;
+    opacity: 0;
+    transition: opacity 250ms;
+    will-change: opacity;
+    background: rgba(0,0,0,0.5);
+    border-radius: var(--border-radius);
+    pointer-events: none;
+
+    &:hover {
+        opacity: 1
+    }
+
+    &:active {
+        background: lighten(rgba(0,0,0,.5), 15%);
+    }
+
+    &.show {
+        opacity: .5;
+        cursor: pointer;
+        pointer-events: all;
+    }
+}
