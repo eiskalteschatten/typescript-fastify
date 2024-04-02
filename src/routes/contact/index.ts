@@ -1,7 +1,7 @@
 import { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify';
 
-import logger from '~/lib/logger';
-import transporter from '~/lib/mailTransporter';
+import logger from '@/lib/logger';
+import transporter from '@/lib/mailTransporter';
 
 interface EmailData {
   name: string;
