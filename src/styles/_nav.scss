@@ -1,43 +1,57 @@
 @import "./variables";
 
-.sidebar-nav {
-  background-color: var(--background-secondary-color);
-  width: 300px;
-  border-right: 1px solid var(--border-color);
+.mobile-menu-container {
+  position: fixed;
+  z-index: 10000000;
+  height: calc(100% - #{$toolbarHeightMobile});
+  width: 100%;
+  top: $toolbarHeightMobile;
+  right: -100%;
+  background-color: #000000;
+  color: #ffffff;
+  overflow: auto;
+  padding: 15px 25px;
+  transition: right 350ms ease-in-out;
 
-  @media (max-width: $smMax) {
-    position: fixed;
-    top: $toolbarHeightMobile;
-    left: -100%;
-    transition: left $animationSpeed ease-in-out;
-    height: calc(100% - #{$toolbarHeightMobile});
-    z-index: 10000;
+  &.open {
+    right: 0;
+  }
 
-    &.open {
-      left: 0;
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 
-      &::before {
-        content: '';
-        position: fixed;
-        top: $toolbarHeightMobile;
-        left: 0;
-        height: calc(100% - #{$toolbarHeightMobile});
-        width: 100%;
-        z-index: -1;
-        opacity: 1;
-        animation: sideNavFadeBgIn $animationSpeed ease-in-out;
-        background-color: var(--backdrop-color);
+    .mobile-nav-button {
+      font-size: 1.2em;
+      position: relative;
+      border-top-right-radius: var(--border-radius);
+      border-bottom-right-radius: var(--border-radius);
+      color: #ffffff;
+      text-decoration: none;
+      white-space: nowrap;
+      padding: 6px 12px;
+
+      &.selected {
+        background-color: var(--active-background-color);
+
+        &::before {
+          content: "";
+          border-top-left-radius: var(--border-radius);
+          border-bottom-left-radius: var(--border-radius);
+          height: 100%;
+          width: 3px;
+          position: absolute;
+          // left: -8px;
+          left: -2px;
+          top: 0;
+          background-color: var(--primary-color);
+        }
       }
     }
-  }
-}
-
-@keyframes sideNavFadeBgIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
@@ -45,19 +59,20 @@
   height: 100%;
 
   .main-nav-button {
-    color: var(--color);
+    color: #ffffff;
     text-decoration: none;
     white-space: nowrap;
-    padding: 6px 12px;
+    padding: 4px 12px;
     border-radius: var(--border-radius);
     transition: background-color 175ms;
+    font-size: 0.9em;
 
     &:hover, &.selected {
-      background-color: var(--hover-background-color);
+      background-color: $darkHoverBgColor;
     }
 
     &:active {
-      background-color: var(--active-background-color);
+      background-color: $darkActiveBgColor;
     }
   }
 }

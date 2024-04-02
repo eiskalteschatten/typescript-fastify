@@ -1,6 +1,7 @@
 @import "./variables";
 
 .header {
+  background-color: #000000;
   height: $toolbarHeight;
 
   @media (max-width: $smMax) {
@@ -8,12 +9,6 @@
   }
 
   .logo-link {
-    font-size: 1.5em;
-    font-weight: 600;
-    color: var(--color);
-
-    .logo {
-      width: 50px;
-    }
+    color: #ffffff;
   }
 }

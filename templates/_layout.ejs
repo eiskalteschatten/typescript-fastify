@@ -15,18 +15,20 @@
     <link rel="stylesheet" href="/css/main.css?v=1">
   </head>
   <body>
-    <header class="header py-5 d-flex align-items-center justify-content-center">
-      <a href="/" class="d-flex align-items-center gap-2 logo-link">
-        <img src="/images/favicon.svg" alt="TypeScript Fastify" class="logo"> TypeScript Fastify
-      </a>
+    <header class="header py-2 pe-3 d-flex align-items-center justify-content-between">
+      <div class="container-xl d-flex align-items-center gap-5">
+        <%- include('./_partials/logo.ejs') %>
 
-      <nav class="d-none d-lg-flex align-items-center gap-3">
-        <% for (const navItem of mainNav) { %>
-          <a href="<%=navItem.url%>" is="nav-link" class="main-nav-button <% if (typeof mainNavId !== 'undefined' && mainNavId === navItem.id) { %>selected<% } %>">
-            <%=navItem.label%>
-          </a>
-        <% } %>
-      </nav>
+        <nav class="d-none d-lg-flex align-items-center gap-2 main-nav">
+          <% for (const navItem of mainNav) { %>
+            <a href="<%=navItem.url%>" is="nav-link" class="main-nav-button <% if (typeof mainNavId !== 'undefined' && mainNavId === navItem.id) { %>selected<% } %>">
+              <%=navItem.label%>
+            </a>
+            <% } %>
+          </nav>
+        </div>
+
+        <mobile-menu-button></mobile-menu-button>
     </header>
 
     <main class="flex-grow-1 py-4 container">
