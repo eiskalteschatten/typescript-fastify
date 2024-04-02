@@ -25,9 +25,9 @@ $lightBorderLighterColor: lighten($lightBorderColor, 15%);
 $darkBorderColor: #333333;
 $darkBorderLighterColor: darken($darkBorderColor, 10%);
 $darkShadowColor: #313030;
-$lightHoverBgColor: #{$paletteBrown}50;
+$lightHoverBgColor: darken($lightBg, 15%);
 $darkHoverBgColor: lighten($darkBg, 15%);
-$lightActiveBgColor: #{$paletteBrown}85;
+$lightActiveBgColor: darken($lightBg, 9%);
 $darkActiveBgColor: lighten($darkBg, 9%);
 
 $borderRadius: 5px;
