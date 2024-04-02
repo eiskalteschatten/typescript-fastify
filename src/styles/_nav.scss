@@ -32,6 +32,7 @@
       text-decoration: none;
       white-space: nowrap;
       padding: 6px 12px;
+      color: var(--color);
 
       &.selected {
         background-color: var(--active-background-color);
