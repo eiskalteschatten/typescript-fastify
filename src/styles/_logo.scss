@@ -3,6 +3,7 @@
   text-decoration: none !important;
   transition: filter 200ms;
   font-weight: 600;
+  color: var(--color);
 
   @media (max-width: $smMax) {
     font-size: 1.2em;

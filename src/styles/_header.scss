@@ -1,14 +1,10 @@
 @import "./variables";
 
 .header {
-  background-color: #000000;
   height: $toolbarHeight;
+  border-bottom: 1px solid var(--border-color);
 
   @media (max-width: $smMax) {
     height: $toolbarHeightMobile;
-  }
-
-  .logo-link {
-    color: #ffffff;
   }
 }
