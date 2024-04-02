@@ -13,9 +13,7 @@
     "prestart": "node ./dist/src/bootstrap.js",
     "start": "node ./dist/src/main.js",
     "test": "npm run lint",
-    "lint": "eslint \"./**/*.{tsx,ts,js,json}\"",
-    "refreshFeeds": "node ./dist/src/bootstrap.js && node ./bin/refreshfeeds.js",
-    "initializeSubmodules": "git submodule update --init --recursive"
+    "lint": "eslint \"./**/*.{tsx,ts,js,json}\""
   },
   "repository": {
     "type": "git",
