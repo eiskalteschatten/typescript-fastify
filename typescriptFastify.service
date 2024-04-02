@@ -13,7 +13,7 @@
 # sudo journalctl --follow -u typescriptFastify
 
 [Unit]
-Description=Feed The Dev
+Description=TypeScript Fastify
 
 [Service]
 ExecStart=/var/www/typescript-fastify/typescriptFastifyStart.sh
