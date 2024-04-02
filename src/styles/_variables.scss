@@ -8,25 +8,26 @@ $paletteDarkGray: #2F3436;
 $paletteLightGray: #d3d3d3;
 $palettePink: #ff0080;
 $palettePurple: #7928ca;
+$paletteTan: #f7efcb;
+$paletteBrown: #544130;
 
-$primaryColor: $paletteYellow;
-$primaryColorLight: darken($paletteYellow, 10%);
+$primaryColor: $paletteBlue;
 
 $lightBg: #ffffff;
-$lightSecondaryBg: #f5f5f5;
-$lightColor: #24292f;
-$lightShadowColor: $paletteLightGray;
-$darkBg: #121212;
-$darkSecondaryBg: #000000;
-$darkColor: #f0f0f0;
+$lightSecondaryBg: #f5f5f7;
+$lightColor: #1a1816;
+$lightShadowColor: #6a5c46;
+$darkBg: #141414;
+$darkSecondaryBg: #1d1d1f;
+$darkColor: #f1f1f1;
 $lightBorderColor: #cfcfcf;
 $lightBorderLighterColor: lighten($lightBorderColor, 15%);
 $darkBorderColor: #333333;
 $darkBorderLighterColor: darken($darkBorderColor, 10%);
-$darkShadowColor: #111111;
-$lightHoverBgColor: darken($lightBg, 15%);
+$darkShadowColor: #313030;
+$lightHoverBgColor: #{$paletteBrown}50;
 $darkHoverBgColor: lighten($darkBg, 15%);
-$lightActiveBgColor: darken($lightBg, 9%);
+$lightActiveBgColor: #{$paletteBrown}85;
 $darkActiveBgColor: lighten($darkBg, 9%);
 
 $borderRadius: 5px;
@@ -40,7 +41,7 @@ $successColor: $paletteGreen;
 $errorColor: $paletteRed;
 
 $toolbarHeight: 65px;
-$toolbarHeightMobile: 45px;
+$toolbarHeightMobile: 55px;
 
 $animationSpeed: 350ms;
 

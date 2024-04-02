@@ -4,15 +4,11 @@
   transition: filter 200ms;
   font-weight: 600;
 
-  &:hover {
-    filter: blur(1px);
+  @media (max-width: $smMax) {
+    font-size: 1.2em;
   }
 
-  .logo {
-    width: 40px;
-
-    @media (max-width: $smMax) {
-      width: 35px;
-    }
+  &:hover {
+    filter: blur(1px);
   }
 }

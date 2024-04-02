@@ -7,7 +7,7 @@
   --opposite-background-color: #{$darkBg};
   --color: #{$lightColor};
   --opposite-color: #{$darkColor};
-  --primary-color: #{$primaryColorLight};
+  --primary-color: #{$primaryColor};
   --border-color: #{$lightBorderColor};
   --border-lighter-color: #{$lightBorderLighterColor};
   --border-radius: #{$borderRadius};
@@ -24,7 +24,6 @@
     --opposite-background-color: #{$lightBg};
     --color: #{$darkColor};
     --opposite-color: #{$lightColor};
-    --primary-color: #{$primaryColor};
     --border-color: #{$darkBorderColor};
     --border-lighter-color: #{$darkBorderLighterColor};
     --hover-background-color: #{$darkHoverBgColor};
