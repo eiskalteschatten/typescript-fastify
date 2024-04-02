@@ -1,0 +1,13 @@
+.footer {
+  background-color: var(--background-secondary-color);
+  font-size: .9em;
+
+  a {
+    color: var(--color);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
